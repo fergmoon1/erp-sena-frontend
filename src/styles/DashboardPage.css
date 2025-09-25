@@ -1,0 +1,1599 @@
+/* Dashboard Moderno y Profesional - Nueva Interfaz */
+
+.dashboard-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 24px;
+  color: #1e293b;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 24px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+}
+
+.dashboard-header h1 {
+  color: #1e293b;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.dashboard-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  margin-bottom: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+.dashboard-content h2 {
+  color: #1e293b;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.dashboard-content p {
+  color: #64748b;
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Separador moderno */
+.dashboard-separator {
+  border: none;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 40px 0;
+}
+
+/* Nuevas secciones del dashboard */
+.dashboard-section {
+  margin-bottom: 48px;
+}
+
+.section-title {
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.section-title i {
+  color: #1976d2;
+  font-size: 20px;
+}
+
+/* Títulos específicos para cada sección */
+.financiero-title {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.operacional-title {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.3);
+}
+
+.predictivo-title {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.calidad-title {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+}
+
+.proveedores-title {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* KPI Cards - Diseño Compacto y Profesional */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-bottom: 48px;
+  min-height: 200px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.3s ease;
+  min-height: 80px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #1976d2;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-color: #cbd5e1;
+}
+
+.stat-card.blue {
+  border-left: 4px solid #3b82f6;
+}
+
+.stat-card.green {
+  border-left: 4px solid #10b981;
+}
+
+.stat-card.yellow {
+  border-left: 4px solid #f59e0b;
+}
+
+.stat-card.red {
+  border-left: 4px solid #ef4444;
+}
+
+.stat-card.purple {
+  border-left: 4px solid #8b5cf6;
+}
+
+.stat-card.cyan {
+  border-left: 4px solid #06b6d4;
+}
+
+.stat-card.orange {
+  border-left: 4px solid #f97316;
+}
+
+.stat-card.pink {
+  border-left: 4px solid #ec4899;
+}
+
+.stat-card.teal {
+  border-left: 4px solid #14b8a6;
+}
+
+.stat-card.indigo {
+  border-left: 4px solid #6366f1;
+}
+
+.stat-card.lime {
+  border-left: 4px solid #84cc16;
+}
+
+.stat-card.brown {
+  border-left: 4px solid #a16207;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.stat-extra-info {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 500;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.stat-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  flex-shrink: 0;
+  background: #1976d2;
+}
+
+.stat-card.blue .stat-icon {
+  background: #3b82f6;
+}
+
+.stat-card.green .stat-icon {
+  background: #10b981;
+}
+
+.stat-card.yellow .stat-icon {
+  background: #f59e0b;
+}
+
+.stat-card.red .stat-icon {
+  background: #ef4444;
+}
+
+.stat-card.purple .stat-icon {
+  background: #8b5cf6;
+}
+
+.stat-card.cyan .stat-icon {
+  background: #06b6d4;
+}
+
+.stat-card.orange .stat-icon {
+  background: #f97316;
+}
+
+.stat-card.pink .stat-icon {
+  background: #ec4899;
+}
+
+.stat-card.teal .stat-icon {
+  background: #14b8a6;
+}
+
+.stat-card.indigo .stat-icon {
+  background: #6366f1;
+}
+
+.stat-card.lime .stat-icon {
+  background: #84cc16;
+}
+
+.stat-card.brown .stat-icon {
+  background: #a16207;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.stat-main-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.stat-secondary-value {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1.1;
+}
+
+.stat-subtitle {
+  font-size: 8px;
+  color: #94a3b8;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 1px;
+}
+
+.stat-trend {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 8px;
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.stat-trend.positive {
+  color: #10b981;
+}
+
+.stat-trend.negative {
+  color: #ef4444;
+}
+
+.stat-trend.neutral {
+  color: #64748b;
+}
+
+/* KPI Cards específicas */
+.kpi-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 32px 24px;
+  min-height: 140px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+}
+
+.kpi-number {
+  font-size: 32px;
+  font-weight: 900;
+  color: #1e293b;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.kpi-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Filter Section - Moderno */
+.filter-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.filter-section h2 {
+  margin: 0 0 24px 0;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.filter-grid label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.filter-grid input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #1e293b;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filter-grid input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filter-button button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filter-button button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Alertas de Stock - Modernas */
+.alert-section {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.alert-section h2 {
+  margin: 0 0 24px 0;
+  color: #92400e;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.alert-card {
+  background: white;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.alert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.alert-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.stock-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.stock-badge.critical {
+  background: #ef4444;
+}
+
+.alert-content p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.alert-actions {
+  margin-top: 16px;
+}
+
+.alert-actions button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.alert-actions button:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Tables Grid - Moderno y Profesional */
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.table-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.table-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.table-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.table-card h2 {
+  margin: 0 0 24px 0;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+/* Colores específicos para títulos de tablas */
+.table-card h2.ventas-title {
+  background: #3b82f6;
+  color: white;
+}
+
+.table-card h2.pedidos-title {
+  background: #10b981;
+  color: white;
+}
+
+.table-card h2.productos-title {
+  background: #f59e0b;
+  color: white;
+}
+
+.table-card h2.clientes-title {
+  background: #ef4444;
+  color: white;
+}
+
+.table-card h2.inventario-title {
+  background: #8b5cf6;
+  color: white;
+}
+
+.table-card h2.proveedores-title {
+  background: #06b6d4;
+  color: white;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+}
+
+.table-card th {
+  background: #f8fafc;
+  color: #374151;
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-card td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+  font-size: 14px;
+  line-height: 1.5;
+  background: white;
+}
+
+.table-card tr:hover {
+  background: #f8fafc;
+}
+
+.table-card tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status badges modernos */
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.status-badge.pendiente {
+  background: #f59e0b;
+}
+
+.status-badge.aprobado {
+  background: #10b981;
+}
+
+.status-badge.rechazado {
+  background: #ef4444;
+}
+
+.status-badge.completado {
+  background: #3b82f6;
+}
+
+.status-badge.default {
+  background: #6b7280;
+}
+
+/* Progress bars modernos */
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px 0;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  max-width: 100%;
+}
+
+/* Botones modernos */
+.btn-filter {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-filter:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Charts Grid - Moderno con contraste */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.chart-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  border-radius: 16px 16px 0 0;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: #cbd5e1;
+}
+
+.chart-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.chart-card h2 {
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Colores modernos para diferentes tipos de gráficas */
+.chart-card.ventas-modern {
+  border-left: 5px solid #3b82f6;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.chart-card.pedidos-modern {
+  border-left: 5px solid #10b981;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.chart-card.productos-modern {
+  border-left: 5px solid #f59e0b;
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+}
+
+.chart-card.clientes-modern {
+  border-left: 5px solid #8b5cf6;
+  background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+}
+
+.chart-card.financiero-modern {
+  border-left: 5px solid #10b981;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.chart-card.inventario-modern {
+  border-left: 5px solid #f59e0b;
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+}
+
+.chart-card.proveedores-modern {
+  border-left: 5px solid #6366f1;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
+}
+
+.chart-card.operacional-modern {
+  border-left: 5px solid #ec4899;
+  background: linear-gradient(135deg, #ffffff 0%, #fdf2f8 100%);
+}
+
+.chart-card.predictivo-modern {
+  border-left: 5px solid #f59e0b;
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+}
+
+.chart-card.calidad-modern {
+  border-left: 5px solid #14b8a6;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+}
+
+.chart-card .recharts-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* No data state */
+.no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #64748b;
+  font-style: italic;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 2px dashed #e2e8f0;
+  font-size: 16px;
+}
+
+/* Loading y Error */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: #64748b;
+  background: white;
+  border-radius: 16px;
+}
+
+.loading-spinner i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: #ef4444;
+  text-align: center;
+  background: #fef2f2;
+  border-radius: 16px;
+  border: 1px solid #fecaca;
+}
+
+.error-message i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ef4444;
+}
+
+.error-message button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.error-message button:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Responsive moderno */
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+  }
+  
+  .stat-card {
+    padding: 5px 3px;
+    min-height: 50px;
+  }
+  
+  .stat-main-value {
+    font-size: 12px;
+  }
+  
+  .stat-label {
+    font-size: 7px;
+  }
+  
+  .stat-subtitle {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 4px;
+  }
+  .dashboard-content {
+    padding: 4px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+  .dashboard-section {
+    margin-bottom: 16px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .stat-card {
+    width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 10px 6px;
+    font-size: 1em;
+    border-radius: 10px;
+  }
+  .section-title {
+    font-size: 1.1em;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+  }
+  .filter-section {
+    padding: 8px 2px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .stat-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 8px;
+  }
+  
+  .stat-main-value {
+    font-size: 11px;
+  }
+  
+  .stat-secondary-value {
+    font-size: 7px;
+  }
+  
+  .stat-label {
+    font-size: 7px;
+  }
+  
+  .stat-subtitle {
+    font-size: 6px;
+  }
+  
+  .stat-trend {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+  
+  .charts-grid {
+    gap: 20px;
+  }
+  
+  .chart-card {
+    padding: 24px;
+    min-height: 350px;
+  }
+  
+  .chart-card h2 {
+    font-size: 18px;
+  }
+  
+  .tables-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .table-card {
+    padding: 24px;
+  }
+  
+  .filter-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  
+  .section-title i {
+    font-size: 16px;
+  }
+  
+  .financiero-title,
+  .operacional-title,
+  .predictivo-title,
+  .calidad-title,
+  .proveedores-title {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  
+  .dashboard-section {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.1em;
+  }
+  .stat-card {
+    font-size: 1.1em;
+    padding: 8px 2px;
+  }
+  .dashboard-content {
+    padding: 2px;
+    border-radius: 6px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  
+  .stat-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 7px;
+  }
+  
+  .stat-main-value {
+    font-size: 10px;
+  }
+  
+  .stat-secondary-value {
+    font-size: 6px;
+  }
+  
+  .stat-label {
+    font-size: 6px;
+  }
+  
+  .stat-subtitle {
+    font-size: 5px;
+  }
+  
+  .stat-trend {
+    font-size: 8px;
+    padding: 1px 3px;
+  }
+  
+  .chart-card {
+    padding: 20px;
+  }
+  
+  .table-card {
+    padding: 20px;
+  }
+  
+  .table-card th,
+  .table-card td {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+  
+  .section-title {
+    font-size: 1em;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+  
+  .financiero-title,
+  .operacional-title,
+  .predictivo-title,
+  .calidad-title,
+  .proveedores-title {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  
+  .dashboard-section {
+    margin-bottom: 24px;
+  }
+}
+
+/* Tema oscuro */
+body.dark-mode .dashboard-container {
+  background: #0f172a;
+}
+
+body.dark-mode .dashboard-content,
+body.dark-mode .table-card,
+body.dark-mode .chart-card,
+body.dark-mode .filter-section,
+body.dark-mode .stat-card {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+body.dark-mode .kpi-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-mode .kpi-number {
+  color: #f1f5f9;
+}
+
+body.dark-mode .kpi-label {
+  color: #94a3b8;
+}
+
+body.dark-mode .alert-section {
+  background: #451a03;
+  border-color: #92400e;
+}
+
+body.dark-mode .alert-section h2 {
+  color: #fbbf24;
+}
+
+body.dark-mode .alert-card {
+  background: #1e293b;
+  border-color: #92400e;
+}
+
+body.dark-mode .no-data {
+  background: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+body.dark-mode .loading-spinner,
+body.dark-mode .error-message {
+  background: #1e293b;
+  border-color: #334155;
+} 
+
+/* Forzar layout de clientes igual a dashboard */
+.clientes-container,
+.clientes-form-section,
+.clientes-form-card,
+.clientes-table-section,
+.clientes-search-section {
+  all: unset !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  width: auto !important;
+  max-width: 100% !important;
+} 
+
+/* Estilos específicos para ClientesPage */
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #64748b;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #475569;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 2px;
+}
+
+.btn-icon:hover {
+  background: #e2e8f0;
+  color: #475569;
+  transform: translateY(-1px);
+}
+
+.btn-icon.btn-danger {
+  background: #fef2f2;
+  color: #ef4444;
+  border-color: #fecaca;
+}
+
+.btn-icon.btn-danger:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* FORMULARIO CLIENTES MÁS COMPACTO, MODERNO Y PROFESIONAL */
+.client-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #e3edfa; /* Azul claro más visible */
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.07);
+  padding: 24px 18px 18px 18px;
+  border: 1.5px solid #e0e8f0;
+  margin-bottom: 0;
+}
+
+.form-section {
+  background: transparent; /* Fondo ya lo da el form principal */
+  border: none;
+  border-radius: 0;
+  padding: 0 0 8px 0;
+  margin-bottom: 8px;
+}
+
+.form-section h3 {
+  color: #1976d2;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e0e8f0;
+  letter-spacing: 0.5px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px 16px; /* Menos espacio entre campos */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* Menos espacio entre label y campo */
+  margin-bottom: 0;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+  margin-bottom: 2px;
+  letter-spacing: 0.1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px 12px;
+  border: 1.2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff; /* Campos en blanco */
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.03);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.10);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+/* --- Imagen y fila horizontal en formulario de clientes --- */
+.form-row-horizontal {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.image-upload-container {
+  min-width: 140px;
+  max-width: 180px;
+  flex: 0 0 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-upload-label {
+  width: 100%;
+  cursor: pointer;
+}
+
+.image-upload-placeholder {
+  width: 140px;
+  height: 140px;
+  border: 2.5px dashed #1976d2;
+  border-radius: 16px;
+  background: #f4f8fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+  margin-bottom: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-upload-placeholder.has-image {
+  border-style: solid;
+  background: #e3edfa;
+}
+
+.image-upload-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.image-upload-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1976d2;
+  font-size: 32px;
+  gap: 6px;
+  text-align: center;
+}
+
+.image-upload-icon p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.image-upload-title {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.7);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.form-fields {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px 16px;
+}
+
+@media (max-width: 900px) {
+  .form-row-horizontal {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .image-upload-container {
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .form-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-form {
+    padding: 12px 4px 8px 4px;
+    border-radius: 12px;
+  }
+  .form-section h3 {
+    font-size: 15px;
+    padding-bottom: 1px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+} 
+
+.clientes-badge.empresa {
+  background: #1976d2;
+  color: #fff;
+  font-weight: 700;
+  border: 1.5px solid #1976d2;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  min-width: 80px;
+  display: inline-block;
+  text-align: center;
+}
+
+.clientes-badge.individual {
+  background: #10b981;
+  color: #fff;
+  font-weight: 700;
+  border: 1.5px solid #10b981;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.10);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  min-width: 80px;
+  display: inline-block;
+  text-align: center;
+}
+
+.centered {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.table-card th, .table-card td {
+  padding: 14px 10px;
+  font-size: 15px;
+}
+
+.table-card th {
+  background: #e3edfa;
+  color: #1976d2;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+} 
+
+/* Tablas scrollables en móvil */
+@media (max-width: 768px) {
+  .table-card {
+    overflow-x: auto;
+    padding: 12px;
+  }
+  .table-card table {
+    min-width: 600px;
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+  .table-card th, .table-card td {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .dashboard-content {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-card table {
+    min-width: 400px;
+  }
+  .dashboard-header h1 {
+    font-size: 18px;
+  }
+  .dashboard-content {
+    padding: 4px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+} 

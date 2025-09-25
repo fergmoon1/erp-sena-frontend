@@ -1,0 +1,363 @@
+/* Notification Bell */
+.notification-bell {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 12px;
+}
+
+.notification-trigger,
+.stock-alert-trigger {
+  position: relative;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notification-trigger:hover,
+.stock-alert-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stock-alert-trigger {
+  background: #ef4444;
+}
+
+.notification-badge,
+.stock-alert-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Dropdowns */
+.notification-dropdown,
+.stock-alert-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  max-height: 500px;
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-header,
+.stock-alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.notification-header h3,
+.stock-alert-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.notification-actions,
+.stock-alert-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-mark-all,
+.btn-clear-all {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mark-all:hover,
+.btn-clear-all:hover {
+  background: var(--secondary-color);
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close:hover {
+  color: #374151;
+}
+
+/* Notification List */
+.notification-list,
+.stock-alert-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.notification-item:hover {
+  background: #f9fafb;
+}
+
+.notification-item.unread {
+  background: #f0f9ff;
+}
+
+.notification-item.unread::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-color);
+}
+
+.notification-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.notification-item.success .notification-icon {
+  color: #10b981;
+}
+
+.notification-item.error .notification-icon {
+  color: #ef4444;
+}
+
+.notification-item.warning .notification-icon {
+  color: #f59e0b;
+}
+
+.notification-item.info .notification-icon {
+  color: #3b82f6;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.notification-message {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.notification-remove {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.notification-remove:hover {
+  background: #f3f4f6;
+  color: #ef4444;
+}
+
+/* Stock Alert Items */
+.stock-alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.3s ease;
+}
+
+.stock-alert-item:hover {
+  background: #f9fafb;
+}
+
+.stock-alert-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+  font-size: 14px;
+}
+
+.stock-alert-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.stock-alert-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.stock-alert-message {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.stock-alert-time {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Empty States */
+.no-notifications,
+.no-alerts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.no-notifications i,
+.no-alerts i {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.no-notifications p,
+.no-alerts p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Overlay */
+.notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notification-bell {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .notification-dropdown,
+  .stock-alert-dropdown {
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-height: 60vh;
+  }
+  
+  .notification-item,
+  .stock-alert-item {
+    padding: 12px 16px;
+  }
+} 

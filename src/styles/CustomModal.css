@@ -1,0 +1,126 @@
+/* Fondo y animación */
+.custom-modal-backdrop {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+  opacity: 1;
+  padding-top: 0;
+}
+
+.custom-modal-wrap {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13), 0 1.5px 6px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 1.7rem 1.5rem 1.2rem 1.5rem;
+  box-sizing: border-box;
+  animation: modalIn 0.38s cubic-bezier(.4,0,.2,1);
+  border: 2px solid #2563eb22;
+}
+
+@keyframes modalIn {
+  from { transform: translateY(-32px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.custom-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: #b0b0b0;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 50%;
+}
+.custom-modal-close:hover {
+  color: #fff;
+  background: #dc2626;
+}
+
+.custom-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  font: 800 1.18em/1.1em 'Segoe UI', Raleway, Open Sans, Arial, Sans-Serif;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.1rem;
+  color: #2563eb;
+  text-align: center;
+  border-bottom: 1.5px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.custom-modal-header .modal-icon {
+  font-size: 1.3em;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+}
+
+.custom-modal-content {
+  font-weight: 400;
+  font-size: 1.01rem;
+  color: #444;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.custom-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-top: 0.3rem;
+}
+
+.custom-modal-actions .button {
+  display: inline-block;
+  padding: 0.32em 1.1em;
+  background: #f3f4f6;
+  color: #2563eb;
+  text-decoration: none;
+  letter-spacing: 0.075em;
+  line-height: 2rem;
+  font-family: 'Segoe UI', Raleway, Open Sans, Arial;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 7px;
+  border: 1.5px solid #e0e0e0;
+  transition: .13s all;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.custom-modal-actions .button:hover {
+  color: #fff;
+  background: #2563eb;
+  border-color: #2563eb;
+}
+.custom-modal-actions .button.positive {
+  border-color: #6199B7;
+  color: #fff;
+  background: #2563eb;
+}
+.custom-modal-actions .button.positive:hover {
+  border-color: #1d4ed8;
+  color: #fff;
+  background-color: #1d4ed8;
+} 

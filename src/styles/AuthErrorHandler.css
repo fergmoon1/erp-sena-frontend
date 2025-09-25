@@ -1,0 +1,91 @@
+.auth-error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.auth-error-modal {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-error-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #dc3545;
+}
+
+.auth-error-header i {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.auth-error-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.auth-error-content p {
+  margin: 0 0 20px 0;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.auth-error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.auth-error-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-retry {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-retry:hover {
+  background-color: #0056b3;
+}
+
+.btn-logout {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-logout:hover {
+  background-color: #545b62;
+} 

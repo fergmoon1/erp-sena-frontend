@@ -1,0 +1,110 @@
+/* Reset General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: rgb(216, 216, 216); /*Color letras side bar*/
+    font-size: 12px; 
+}
+
+body.dark-mode {
+    background-color: #181a1b;
+    color: #e0e0e0;
+}
+
+.container-fluid {
+    display: flex;
+    height: 100vh;
+    padding: 0; /* Elimina cualquier padding implícito */
+}
+
+/* Contenido */
+.contenido {
+    flex: 1;
+    padding: 0; /* Sin padding */
+}
+
+body.dark-mode .contenido {
+    background: #181a1b !important;
+}
+
+.work-area {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: calc(100vh - 118px);
+    width: 100%;
+    background: rgb(236, 236, 236);
+    color: black;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 26px;
+    margin-bottom: 6px;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+body.dark-mode .work-area {
+    background: #23272b !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #333 !important;
+}
+
+body.dark-mode .dashboard-container,
+body.dark-mode .dashboard-content,
+body.dark-mode .table-card,
+body.dark-mode .chart-card,
+body.dark-mode .filter-section {
+    background: #23272b !important;
+    color: #e0e0e0 !important;
+    border-color: #333 !important;
+}
+body.dark-mode th {
+    background: #23272b !important;
+    color: #90caf9 !important;
+}
+body.dark-mode td {
+    background: #23272b !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .status-badge.yellow { background: #fbc02d !important; color: #23272b !important; }
+body.dark-mode .status-badge.green { background: #43a047 !important; color: #fff !important; }
+body.dark-mode .status-badge.red { background: #e53935 !important; color: #fff !important; } 
+
+@media (max-width: 768px) {
+  .container-fluid {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .contenido {
+    width: 100vw;
+    min-width: 0;
+    padding: 0;
+  }
+  .work-area {
+    padding: 8px 2px;
+    height: auto;
+    min-height: 60vh;
+    border-radius: 12px;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: #f8fafc;
+  }
+}
+@media (max-width: 480px) {
+  .work-area {
+    padding: 2px 0;
+    border-radius: 6px;
+  }
+} 

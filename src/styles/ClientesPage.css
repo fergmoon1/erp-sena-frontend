@@ -1,0 +1,620 @@
+/* Estilos para imágenes de clientes */
+.client-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.client-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e9ecef;
+}
+
+.client-image-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+}
+
+.client-image-placeholder i {
+  font-size: 1.2rem;
+}
+
+/* Estilos para el componente de imagen en el formulario */
+.image-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.image-upload-area {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-upload-area:hover {
+  border-color: #007bff;
+  background: #f0f8ff;
+}
+
+.image-upload-area.drag-over {
+  border-color: #007bff;
+  background: #e3f2fd;
+  transform: scale(1.05);
+}
+
+.image-upload-area.uploading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #6c757d;
+  padding: 10px;
+}
+
+.image-placeholder i {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #adb5bd;
+}
+
+.image-placeholder p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.image-placeholder small {
+  font-size: 0.7rem;
+  color: #adb5bd;
+  margin-top: 4px;
+}
+
+.upload-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #007bff;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-change-image,
+.btn-remove-image {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-change-image {
+  background: #007bff;
+  color: white;
+}
+
+.btn-change-image:hover {
+  background: #0056b3;
+}
+
+.btn-remove-image {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-remove-image:hover {
+  background: #c82333;
+}
+
+/* Estilos específicos para el modal de edición */
+.modal-image-upload {
+  margin-bottom: 10px;
+}
+
+.modal-image-upload .image-upload-area {
+  width: 100px;
+  height: 100px;
+}
+
+.modal-image-upload .image-placeholder p {
+  font-size: 0.7rem;
+}
+
+.modal-image-upload .image-placeholder small {
+  font-size: 0.6rem;
+}
+
+.modal-image-upload .image-actions {
+  margin-top: 5px;
+}
+
+.modal-image-upload .btn-change-image,
+.modal-image-upload .btn-remove-image {
+  font-size: 0.7rem;
+  padding: 3px 6px;
+}
+
+/* Estilos para botones del modal */
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal-buttons button {
+  padding: 8px 16px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  min-width: 80px !important;
+  transform: none !important;
+}
+
+.modal-buttons .btn-secondary {
+  background: #6c757d !important;
+  color: white !important;
+}
+
+.modal-buttons .btn-secondary:hover {
+  background: #5a6268 !important;
+  transform: none !important;
+}
+
+.modal-buttons .btn-danger {
+  background: #dc3545 !important;
+  color: white !important;
+}
+
+.modal-buttons .btn-danger:hover {
+  background: #c82333 !important;
+  transform: none !important;
+}
+
+.modal-buttons .btn-primary {
+  background: #007bff !important;
+  color: white !important;
+}
+
+.modal-buttons .btn-primary:hover {
+  background: #0056b3 !important;
+  transform: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .client-image-container {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .client-image,
+  .client-image-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .image-upload-area {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .image-placeholder p {
+    font-size: 0.7rem;
+  }
+  
+  .image-placeholder small {
+    font-size: 0.6rem;
+  }
+  
+  /* Modal responsive */
+  .modal-content {
+    width: 95% !important;
+    max-width: 500px !important;
+  }
+  
+  .modal-content form > div {
+    flex-direction: column !important;
+  }
+  
+  .modal-image-upload .image-upload-area {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Botones del modal responsive - solo en pantallas muy pequeñas */
+  .modal-buttons {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .modal-buttons button {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+}
+
+/* Asegurar que los botones estén uno al lado del otro en pantallas normales */
+@media (min-width: 769px) {
+  .modal-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+  
+  .modal-buttons button {
+    width: auto !important;
+    min-width: 80px !important;
+  }
+} 
+
+/* KPI Cards para Clientes - Estilo Compacto */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-bottom: 48px;
+  min-height: 200px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.3s ease;
+  min-height: 80px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #1976d2;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-color: #cbd5e1;
+}
+
+.stat-card.blue {
+  border-left: 4px solid #3b82f6;
+}
+
+.stat-card.green {
+  border-left: 4px solid #10b981;
+}
+
+.stat-card.yellow {
+  border-left: 4px solid #f59e0b;
+}
+
+.stat-card.red {
+  border-left: 4px solid #ef4444;
+}
+
+.stat-card.purple {
+  border-left: 4px solid #8b5cf6;
+}
+
+.stat-card.cyan {
+  border-left: 4px solid #06b6d4;
+}
+
+.stat-card.orange {
+  border-left: 4px solid #f97316;
+}
+
+.stat-card.pink {
+  border-left: 4px solid #ec4899;
+}
+
+.stat-card.teal {
+  border-left: 4px solid #14b8a6;
+}
+
+.stat-card.indigo {
+  border-left: 4px solid #6366f1;
+}
+
+.stat-card.lime {
+  border-left: 4px solid #84cc16;
+}
+
+.stat-card.brown {
+  border-left: 4px solid #a16207;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.stat-extra-info {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 500;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.stat-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  flex-shrink: 0;
+  background: #1976d2;
+}
+
+.stat-card.blue .stat-icon {
+  background: #3b82f6;
+}
+
+.stat-card.green .stat-icon {
+  background: #10b981;
+}
+
+.stat-card.yellow .stat-icon {
+  background: #f59e0b;
+}
+
+.stat-card.red .stat-icon {
+  background: #ef4444;
+}
+
+.stat-card.purple .stat-icon {
+  background: #8b5cf6;
+}
+
+.stat-card.cyan .stat-icon {
+  background: #06b6d4;
+}
+
+.stat-card.orange .stat-icon {
+  background: #f97316;
+}
+
+.stat-card.pink .stat-icon {
+  background: #ec4899;
+}
+
+.stat-card.teal .stat-icon {
+  background: #14b8a6;
+}
+
+.stat-card.indigo .stat-icon {
+  background: #6366f1;
+}
+
+.stat-card.lime .stat-icon {
+  background: #84cc16;
+}
+
+.stat-card.brown .stat-icon {
+  background: #a16207;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.stat-main-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.stat-secondary-value {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1.1;
+}
+
+.stat-subtitle {
+  font-size: 8px;
+  color: #94a3b8;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 1px;
+}
+
+.stat-trend {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 8px;
+  font-weight: 600;
+  margin-top: 1px;
+}
+
+.stat-trend.positive {
+  color: #10b981;
+}
+
+.stat-trend.negative {
+  color: #ef4444;
+}
+
+.stat-trend.neutral {
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+  }
+  
+  .stat-card {
+    padding: 10px 8px;
+    min-height: 70px;
+  }
+  
+  .stat-main-value {
+    font-size: 16px;
+  }
+  
+  .stat-label {
+    font-size: 9px;
+  }
+  
+  .stat-subtitle {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+  
+  .stat-card {
+    padding: 8px 6px;
+    min-height: 65px;
+  }
+  
+  .stat-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+  
+  .stat-main-value {
+    font-size: 14px;
+  }
+  
+  .stat-label {
+    font-size: 8px;
+  }
+  
+  .stat-subtitle {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+  
+  .stat-card {
+    padding: 6px 4px;
+    min-height: 60px;
+  }
+  
+  .stat-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+  }
+  
+  .stat-main-value {
+    font-size: 12px;
+  }
+  
+  .stat-label {
+    font-size: 7px;
+  }
+  
+  .stat-subtitle {
+    font-size: 6px;
+  }
+} 

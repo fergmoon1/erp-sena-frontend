@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #374151;
+  --background-color: #ffffff;
+  --surface-color: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #d1d5db;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
+}
+
+.dark-theme {
+  --primary-color: #3b82f6;
+  --secondary-color: #6b7280;
+  --background-color: #111827;
+  --surface-color: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-color: #374151;
+}
+
+/* Aplicar variables CSS globalmente */
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+}
+
+/* Componentes que usan las variables */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.table {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+}
+
+.table th {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.table td {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Transiciones suaves para cambios de tema */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+} 

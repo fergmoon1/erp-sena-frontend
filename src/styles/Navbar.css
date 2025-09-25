@@ -1,0 +1,541 @@
+/* Topbar */
+.topbar {
+    display: flex;
+    align-items: center;
+    background: #dddcdc;
+    height: 100px;
+    padding: 0 15px;
+    border-radius: 26px;
+    margin: 6px;
+    box-sizing: border-box;
+    width: calc(100% - 8px);
+    margin-left: 0;
+    color: rgba(46, 46, 46, 0.911);
+    overflow: visible;
+    position: relative; /* Permite posicionar .busqueda de manera absoluta */
+}
+
+/* Contenedor de los elementos de la topbar */
+.topbar-content {
+    display: grid;
+    grid-template-columns: 250px 120px 1fr 180px 1.8fr; /* 5 columnas en lugar de 4 */
+    align-items: center;
+    width: 100%;
+    gap: 0;
+    /*background-color: aqua;*/
+}
+
+/* Ícono de hamburguesa */
+.hamburger {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dashboard-texto {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-width: 200px;
+    justify-self: start;
+    grid-column: 1;
+}
+
+.dashboard-texto h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    color: #333;
+}
+
+.dashboard-texto p {
+    font-size: 13px;
+    margin: 2px 0 0 0;
+    color: #666;
+    line-height: 1.1;
+}
+
+.dashboard-texto h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    color: #333;
+}
+
+.dashboard-texto p {
+    font-size: 13px;
+    margin: 2px 0 0 0;
+    color: #666;
+    line-height: 1.1;
+}
+
+.spacer {
+    grid-column: 3;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px; /* Más espacio entre avatar y hora */
+    justify-self: center;
+    grid-column: 4;
+    margin-left: 0;
+}
+
+.perfil-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+}
+
+.perfil-texto strong,
+.perfil-texto span {
+    display: block;
+}
+
+.perfil-texto strong { /*tamaño nombre y apellido*/
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.perfil-texto span { /*tamaño rol*/
+    font-size: 11px;
+    font-weight: 400;
+    color: #555;
+}
+
+.busqueda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 0;
+    justify-self: flex-start;
+}
+
+.busqueda input {
+    padding: 5px 10px;
+    border-radius: 18px; /* Bordes más redondeados como en la imagen */
+    border: 1px solid #949494; /* Borde gris claro */
+    width: 250px; /* Ancho fijo para la barra de búsqueda */
+    height:36px;
+}
+
+.busqueda i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Tamaño de los círculos */
+    height: 36px;
+    border-radius: 50%;
+    background-color: white; /* Fondo blanco */
+    border: .5px solid rgb(94, 94, 94); /* Borde gris claro */
+    color: rgb(94, 94, 94); /* Color del ícono */
+    font-size: 16px;
+}
+
+.hora {
+    text-align: right;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+    min-width: 80px;
+    justify-self: end;
+    margin-left: 32px;
+}
+
+/* Contenedor para barra de búsqueda y hora en la tercera columna */
+.navbar-derecha {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column: 5;
+    width: 100%;
+    gap: 56px;  /* Más espacio entre barra de búsqueda y logout */
+}
+
+.busqueda-spacer {
+    flex: 1;
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .topbar-content {
+        grid-template-columns: 200px 100px 1fr 160px 1.5fr;
+        gap: 8px;
+    }
+    .dashboard-texto h1 {
+        font-size: 18px;
+    }
+    .dashboard-texto p {
+        font-size: 12px;
+    }
+    .perfil-texto strong {
+        font-size: 12px;
+    }
+    .perfil-texto span {
+        font-size: 10px;
+    }
+    .busqueda input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .topbar-content {
+        grid-template-columns: 180px 80px 1fr 140px 1.2fr;
+        gap: 6px;
+    }
+    .dashboard-texto h1 {
+        font-size: 16px;
+    }
+    .dashboard-texto p {
+        font-size: 11px;
+    }
+    .perfil-texto strong {
+        font-size: 11px;
+    }
+    .perfil-texto span {
+        font-size: 9px;
+    }
+    .busqueda input {
+        width: 180px;
+        height: 32px;
+    }
+    .busqueda i {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    .hora-modern {
+        font-size: 13px;
+        min-width: 70px;
+    }
+    .fecha-modern {
+        font-size: 11px;
+    }
+    .tiempo-modern {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        height: 80px;
+        padding: 0 10px;
+    }
+    .topbar-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        gap: 8px;
+    }
+    .dashboard-texto {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+        text-align: center;
+    }
+    .dashboard-texto h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+    .dashboard-texto p {
+        font-size: 11px;
+        margin: 2px 0 0 0;
+    }
+    .hora-modern {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: center;
+        font-size: 12px;
+        min-width: auto;
+    }
+    .fecha-modern {
+        font-size: 10px;
+    }
+    .tiempo-modern {
+        font-size: 11px;
+    }
+    .perfil {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: center;
+        margin-left: 0;
+        gap: 16px;
+    }
+    .perfil-texto strong {
+        font-size: 12px;
+    }
+    .perfil-texto span {
+        font-size: 10px;
+    }
+    .navbar-derecha {
+        grid-column: 1;
+        grid-row: 4;
+        flex-direction: column;
+        gap: 8px;
+        justify-self: center;
+    }
+    .busqueda {
+        justify-self: center;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .busqueda input {
+        width: 250px;
+        height: 36px;
+    }
+    .busqueda i {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    .logout-modern {
+        margin-right: 0;
+    }
+    .spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        height: 70px;
+        padding: 0 8px;
+    }
+    .dashboard-texto h1 {
+        font-size: 14px;
+    }
+    .dashboard-texto p {
+        font-size: 10px;
+    }
+    .hora-modern {
+        font-size: 11px;
+    }
+    .fecha-modern {
+        font-size: 9px;
+    }
+    .tiempo-modern {
+        font-size: 10px;
+    }
+    .perfil-texto strong {
+        font-size: 11px;
+    }
+    .perfil-texto span {
+        font-size: 9px;
+    }
+    .busqueda input {
+        width: 200px;
+        height: 32px;
+    }
+    .busqueda i {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+.logout-menu-btn, .logout-btn {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 16px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.logout-menu-btn:hover, .logout-btn:hover {
+    background: #b71c1c;
+}
+
+.logout-icon-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.logout-icon {
+    font-size: 22px;
+    color: #1976d2;
+    transition: color 0.2s;
+}
+.logout-icon-menu:hover .logout-icon {
+    color: #115293;
+}
+.logout-menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    padding: 8px 16px 8px 16px;
+    min-width: 140px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: fadeIn 0.18s;
+}
+.logout-menu-btn {
+    background: none;
+    border: none;
+    color: #1976d2;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 4px;
+    transition: color 0.2s;
+}
+.logout-menu-btn:hover {
+    color: #115293;
+    text-decoration: underline;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.dark-mode {
+    background: #181a1b !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .topbar {
+    background: #23272b !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .topbar-content {
+    background: none !important;
+}
+body.dark-mode .dashboard-texto h1,
+body.dark-mode .dashboard-texto p {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .perfil-texto strong,
+body.dark-mode .perfil-texto span {
+    color: #e0e0e0 !important;
+}
+body.dark-mode .hora-modern {
+    background: #23272b !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #333 !important;
+}
+body.dark-mode .fecha-modern {
+    color: #90caf9 !important;
+}
+body.dark-mode .tiempo-modern {
+    color: #fff !important;
+}
+body.dark-mode .busqueda input {
+    background: #23272b !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444 !important;
+}
+body.dark-mode .busqueda i {
+    background: #23272b !important;
+    color: #90caf9 !important;
+    border: 1px solid #444 !important;
+}
+body.dark-mode .logout-icon {
+    color: #90caf9 !important;
+}
+body.dark-mode .logout-btn {
+    background: #1976d2 !important;
+    color: #fff !important;
+} 
+
+/* Fecha y hora como elemento independiente */
+.hora-modern {
+    grid-column: 2;
+    justify-self: center;
+     /*padding-left: 0px;     ← Sin padding izquierdo */
+    padding-left: 300px;    /* ← 20px hacia la derecha */
+    /*padding-left: -20px;    ← 20px hacia la izquierda */
+}
+
+/* Mostrar hamburguesa solo en móvil */
+.hamburger {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2100;
+    background: none;
+    border: none;
+  }
+  .topbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    background: #fff;
+    height: 60px;
+    padding: 0 4px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .topbar-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+  }
+  .hamburger {
+    left: 4px;
+    top: 50%;
+    font-size: 20px;
+    padding: 4px;
+  }
+  .dashboard-texto h1 {
+    font-size: 1em;
+  }
+  .dashboard-texto p {
+    font-size: 0.9em;
+  }
+  .perfil-texto strong {
+    font-size: 0.9em;
+  }
+  .perfil-texto span {
+    font-size: 0.8em;
+  }
+  .busqueda input {
+    width: 100%;
+    min-width: 0;
+    font-size: 0.95em;
+    height: 32px;
+  }
+  .busqueda i {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .topbar {
+    height: 44px;
+    border-radius: 0 0 6px 6px;
+    padding: 0 2px;
+  }
+  .hamburger {
+    font-size: 18px;
+    padding: 2px;
+  }
+}
