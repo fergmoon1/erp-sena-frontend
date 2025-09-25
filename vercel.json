@@ -1,0 +1,19 @@
+﻿{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/build/$1"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://erp-sena-backend.railway.app/api",
+    "REACT_APP_NAME": "ERP SENA"
+  }
+}
